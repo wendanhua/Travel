@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5A2-d2-SrM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <scenes>
+        <!--Code Controller-->
+        <scene sceneID="ono-kd-8A1">
+            <objects>
+                <viewController id="5A2-d2-SrM" customClass="CodeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zis-0U-VgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="dxh-fb-cGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j1v-6a-pEa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsx-sW-NLF">
+                                <rect key="frame" x="144" y="91" width="86" height="34"/>
+                                <animations/>
+                                <state key="normal" title="打开照明"/>
+                                <connections>
+                                    <action selector="openSystemLight:" destination="5A2-d2-SrM" eventType="touchUpInside" id="Yg0-gv-kdw"/>
+                                    <action selector="startScanner:" destination="5A2-d2-SrM" eventType="touchUpInside" id="kLM-2j-unL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlF-lS-yta">
+                                <rect key="frame" x="69" y="192" width="237" height="284"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmJ-Lp-Lo4">
+                                <rect key="frame" x="144" y="537" width="86" height="34"/>
+                                <animations/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startScanner:" destination="5A2-d2-SrM" eventType="touchUpInside" id="1Ki-Sv-WV3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pop-eh-h9d">
+                                <rect key="frame" x="0.0" y="20" width="63" height="36"/>
+                                <animations/>
+                                <state key="normal" image="返回"/>
+                                <connections>
+                                    <action selector="backpage:" destination="5A2-d2-SrM" eventType="touchUpInside" id="3fS-Zj-QkA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Die-Ol-aYA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="back" destination="Pop-eh-h9d" id="qkR-2M-uJY"/>
+                        <outlet property="button" destination="vmJ-Lp-Lo4" id="VeE-Gf-Zti"/>
+                        <outlet property="lightButton" destination="Tsx-sW-NLF" id="QfC-GP-y8f"/>
+                        <outlet property="sanFrameView" destination="dlF-lS-yta" id="bdd-zT-E3W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KzF-ew-cL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131.5" y="161.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vmV-oK-ZLJ">
+            <objects>
+                <viewController id="dDA-No-CCI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZCP-0V-ec2"/>
+                        <viewControllerLayoutGuide type="bottom" id="gnn-cV-2Du"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GsP-RH-b8r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs8-2g-Ex0">
+                                <rect key="frame" x="20" y="20" width="65" height="41"/>
+                                <animations/>
+                                <state key="normal" title="导航"/>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6W0-m5-lll">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKF-Yj-mag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556.5" y="161.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="返回" width="9" height="17"/>
+    </resources>
+</document>

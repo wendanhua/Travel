@@ -1,0 +1,71 @@
+//
+//  PrefixHeader.pch
+//  OralEdu
+//
+//  Created by 王俊钢 on 16/7/2.
+//  Copyright © 2016年 wangjungang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define ApplicationDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#endif /* PrefixHeader_pch */
+#define Margin  5
+#define Padding 10
+#define iOS7TopMargin 64 //导航栏44，状态栏20
+#define IOS7_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+#define ButtonHeight 44
+#define NavigationBarHeight 44
+
+#define APPID_VALUE           @"577ca611"
+#define URL_VALUE             @""                 // url
+#define TIMEOUT_VALUE         @"20000"            // timeout      连接超时的时间，以ms为单位
+#define BEST_URL_VALUE        @"1"                // best_search_url 最优搜索路径
+
+#define SEARCH_AREA_VALUE     @"安徽省合肥市"
+#define ASR_PTT_VALUE         @"1"
+#define VAD_BOS_VALUE         @"5000"
+#define VAD_EOS_VALUE         @"1800"
+#define PLAIN_RESULT_VALUE    @"1"
+#define ASR_SCH_VALUE         @"1"
+#import "UIImage+needkit.h"
+#import "AppDelegate.h"
+
+#ifdef __IPHONE_6_0
+# define IFLY_ALIGN_CENTER NSTextAlignmentCenter
+#else
+# define IFLY_ALIGN_CENTER UITextAlignmentCenter
+#endif
+
+#ifdef __IPHONE_6_0
+# define IFLY_ALIGN_LEFT NSTextAlignmentLeft
+#else
+# define IFLY_ALIGN_LEFT UITextAlignmentLeft
+#define  screenW    [UIScreen mainScreen].bounds.size.width
+
+//屏幕宽高
+#define  screenW     [UIScreen mainScreen].bounds.size.width
+#define  screenH     [UIScreen mainScreen].bounds.size.height
+
+//设置比例
+#define  scaleW  414/640
+#define scaleH   736/1136
+
+//设置图片大小
+#define kPictureImageViewMaxWidth 200*scaleW
+#define kPictureImageViewMaxHeight 200*scaleW
+
+
+
+//RGB设置
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define UIThemeColor UIColorFromRGB(0x26252A) //背景黑色
+#define UIBottomViewColor UIColorFromRGB(0xF2F2F5) //底部白色
+#define UIChatViewColor UIColorFromRGB(0xE6E6E6) //聊天窗口白色
+
+
+#endif
